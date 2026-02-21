@@ -1,0 +1,1108 @@
+{
+  "Materials": [
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT500",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT500",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT501",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT501",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT502",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT502",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT503",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT503",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT504",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT504",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT505",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT505",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT506",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT506",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT507",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT507",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT508",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT508",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "TechIconsT509",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "TechIconsT509",
+        "AtlasRef": "ingametechs"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80050730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80050730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80150730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80150730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80250730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80250730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80350730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80350730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80450730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80450730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80550730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80550730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80650730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80650730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80750730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80750730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80850730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80850730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons80950730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons80950730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81050730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81050730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81150730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81150730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81250730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81250730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81350730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81350730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81450730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81450730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81550730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81550730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81650730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81650730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81750730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81750730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81850730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81850730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons81950730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons81950730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82050730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82050730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82150730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82150730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82250730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82250730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82350730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82350730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82450730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82450730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82550730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82550730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82650730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82650730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82750730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82750730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82850730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82850730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons82950730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons82950730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83050730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83050730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83150730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83150730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83250730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83250730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83350730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83350730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83450730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83450730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83550730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83550730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83650730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83650730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83750730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83750730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83850730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83850730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons83950730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons83950730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84050730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84050730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84150730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84150730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84250730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84250730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84350730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84350730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84450730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84450730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84550730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84550730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84650730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84650730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84750730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84750730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84850730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84850730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons84950730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons84950730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons85050730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons85050730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons85150730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons85150730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons85250730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons85250730",
+        "AtlasRef": "ingameunits"
+      }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons85350730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons85350730",
+        "AtlasRef": "ingameunits"
+      }
+    }
+  ],
+  "AtlasTextures": [
+    {
+      "AtlasDef": {
+        "Name": "ingameunits",
+        "Textures": [
+          {
+            "RefName": "UnitIcons80050730",
+            "FileName": "textures/ingame/units/800_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80150730",
+            "FileName": "textures/ingame/units/801_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80250730",
+            "FileName": "textures/ingame/units/802_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80350730",
+            "FileName": "textures/ingame/units/803_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80450730",
+            "FileName": "textures/ingame/units/804_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80550730",
+            "FileName": "textures/ingame/units/805_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80650730",
+            "FileName": "textures/ingame/units/806_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80750730",
+            "FileName": "textures/ingame/units/807_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80850730",
+            "FileName": "textures/ingame/units/808_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons80950730",
+            "FileName": "textures/ingame/units/809_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81050730",
+            "FileName": "textures/ingame/units/810_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81150730",
+            "FileName": "textures/ingame/units/811_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81250730",
+            "FileName": "textures/ingame/units/812_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81350730",
+            "FileName": "textures/ingame/units/813_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81450730",
+            "FileName": "textures/ingame/units/814_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81550730",
+            "FileName": "textures/ingame/units/815_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81650730",
+            "FileName": "textures/ingame/units/816_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81750730",
+            "FileName": "textures/ingame/units/817_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81850730",
+            "FileName": "textures/ingame/units/818_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons81950730",
+            "FileName": "textures/ingame/units/819_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82050730",
+            "FileName": "textures/ingame/units/820_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82150730",
+            "FileName": "textures/ingame/units/821_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82250730",
+            "FileName": "textures/ingame/units/822_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82350730",
+            "FileName": "textures/ingame/units/823_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82450730",
+            "FileName": "textures/ingame/units/824_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82550730",
+            "FileName": "textures/ingame/units/825_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82650730",
+            "FileName": "textures/ingame/units/826_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82750730",
+            "FileName": "textures/ingame/units/827_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82850730",
+            "FileName": "textures/ingame/units/828_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons82950730",
+            "FileName": "textures/ingame/units/829_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83050730",
+            "FileName": "textures/ingame/units/830_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83150730",
+            "FileName": "textures/ingame/units/831_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83250730",
+            "FileName": "textures/ingame/units/832_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83350730",
+            "FileName": "textures/ingame/units/833_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83450730",
+            "FileName": "textures/ingame/units/834_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83550730",
+            "FileName": "textures/ingame/units/835_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83650730",
+            "FileName": "textures/ingame/units/836_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83750730",
+            "FileName": "textures/ingame/units/837_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83850730",
+            "FileName": "textures/ingame/units/838_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons83950730",
+            "FileName": "textures/ingame/units/839_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84050730",
+            "FileName": "textures/ingame/units/840_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84150730",
+            "FileName": "textures/ingame/units/841_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84250730",
+            "FileName": "textures/ingame/units/842_50730.dds",
+            "imageTLX": "0.520078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.559922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84350730",
+            "FileName": "textures/ingame/units/843_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84450730",
+            "FileName": "textures/ingame/units/844_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84550730",
+            "FileName": "textures/ingame/units/845_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84650730",
+            "FileName": "textures/ingame/units/846_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84750730",
+            "FileName": "textures/ingame/units/847_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84850730",
+            "FileName": "textures/ingame/units/848_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons84950730",
+            "FileName": "textures/ingame/units/849_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons85050730",
+            "FileName": "textures/ingame/units/850_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons85150730",
+            "FileName": "textures/ingame/units/851_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons85250730",
+            "FileName": "textures/ingame/units/852_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons85350730",
+            "FileName": "textures/ingame/units/853_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          }
+        ]
+      }
+    },
+    {
+      "AtlasDef": {
+        "Name": "ingametechs",
+        "Textures": [
+          {
+            "RefName": "TechIconsT500",
+            "FileName": "textures/ingame/techs/500_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT501",
+            "FileName": "textures/ingame/techs/501_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT502",
+            "FileName": "textures/ingame/techs/502_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT503",
+            "FileName": "textures/ingame/techs/503_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT504",
+            "FileName": "textures/ingame/techs/504_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT505",
+            "FileName": "textures/ingame/techs/505_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT506",
+            "FileName": "textures/ingame/techs/506_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT507",
+            "FileName": "textures/ingame/techs/507_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT508",
+            "FileName": "textures/ingame/techs/508_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "TechIconsT509",
+            "FileName": "textures/ingame/techs/509_tech.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          }
+        ]
+      }
+    }
+  ]
+}
