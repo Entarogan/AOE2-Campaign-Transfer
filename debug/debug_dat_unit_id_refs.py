@@ -52,6 +52,11 @@ def _iter_unit_id_refs(unit):
         val = getattr(projectile, "projectile_unit_id", None)
         if isinstance(val, int):
             yield ("projectile.projectile_unit_id", val)
+    type_50 = getattr(unit, "type_50", None)
+    if type_50 is not None and hasattr(type_50, "projectile_unit_id"):
+        val = getattr(type_50, "projectile_unit_id", None)
+        if isinstance(val, int):
+            yield ("type_50.projectile_unit_id", val)
     dead_fish = getattr(unit, "dead_fish", None)
     if dead_fish is not None and hasattr(dead_fish, "tracking_unit"):
         val = getattr(dead_fish, "tracking_unit", None)
@@ -66,6 +71,11 @@ def _iter_unit_id_refs(unit):
                     val = getattr(tl, "unit_id", None)
                     if isinstance(val, int):
                         yield (f"creatable.train_locations[{i}].unit_id", val)
+        for attr in ("charge_projectile_unit", "secondary_projectile_unit"):
+            if hasattr(creatable, attr):
+                val = getattr(creatable, attr, None)
+                if isinstance(val, int):
+                    yield (f"creatable.{attr}", val)
 
 
 def collect_unit_id_refs(data: DatFile, watch_ids: set[int]) -> list[tuple[int, int, str, int]]:

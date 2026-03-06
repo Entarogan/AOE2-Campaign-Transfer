@@ -575,6 +575,15 @@
         "TextureRef": "UnitIcons85350730",
         "AtlasRef": "ingameunits"
       }
+    },
+    {
+      "MaterialDef": {
+        "Name": "UnitIcons85450730",
+        "Type": "Atlas",
+        "Blend": "AlphaPlayerColor",
+        "TextureRef": "UnitIcons85450730",
+        "AtlasRef": "ingameunits"
+      }
     }
   ],
   "AtlasTextures": [
@@ -1009,6 +1018,14 @@
           {
             "RefName": "UnitIcons85350730",
             "FileName": "textures/ingame/units/853_50730.dds",
+            "imageTLX": "0.000078",
+            "imageTLY": "0.961614",
+            "imageBRX": "0.039922",
+            "imageBRY": "0.999925"
+          },
+          {
+            "RefName": "UnitIcons85450730",
+            "FileName": "textures/ingame/units/854_50730.dds",
             "imageTLX": "0.000078",
             "imageTLY": "0.961614",
             "imageBRX": "0.039922",

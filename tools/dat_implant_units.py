@@ -171,7 +171,8 @@ def _remap_unit_id_refs_in_unit(unit, id_mapping: dict[int, int]) -> int:
     """
     对单个 Unit 内所有「单位 ID」类引用做重映射（copy_id, base_id, dead_unit_id, blood_unit_id,
     building 的 stack_unit_id/head_unit/transform_unit/pile_unit/annexes[].unit_id,
-    projectile.projectile_unit_id, dead_fish.tracking_unit, creatable.train_locations[].unit_id）。
+    projectile.projectile_unit_id, type_50.projectile_unit_id, dead_fish.tracking_unit,
+    creatable.train_locations[].unit_id, creatable.charge_projectile_unit, creatable.secondary_projectile_unit）。
     返回该单位内重映射的总次数。
     """
     n = 0
@@ -217,6 +218,14 @@ def _remap_unit_id_refs_in_unit(unit, id_mapping: dict[int, int]) -> int:
             projectile.projectile_unit_id = new_val
             n += c
 
+    type_50 = getattr(unit, "type_50", None)
+    if type_50 is not None and hasattr(type_50, "projectile_unit_id"):
+        val = getattr(type_50, "projectile_unit_id", None)
+        new_val, c = do(val)
+        if c:
+            type_50.projectile_unit_id = new_val
+            n += c
+
     dead_fish = getattr(unit, "dead_fish", None)
     if dead_fish is not None and hasattr(dead_fish, "tracking_unit"):
         val = getattr(dead_fish, "tracking_unit", None)
@@ -236,6 +245,13 @@ def _remap_unit_id_refs_in_unit(unit, id_mapping: dict[int, int]) -> int:
                     if c:
                         tl.unit_id = new_val
                         n += c
+        for attr in ("charge_projectile_unit", "secondary_projectile_unit"):
+            if hasattr(creatable, attr):
+                val = getattr(creatable, attr, None)
+                new_val, c = do(val)
+                if c:
+                    setattr(creatable, attr, new_val)
+                    n += c
     return n
 
 
@@ -290,19 +306,28 @@ def fix_implanted_unit_self_ids(
 def remap_unit_copy_base_ids_global(
     target_data: DatFile,
     id_mapping: dict[int, int],
+    *,
+    only_inside_unit_indices: set[int] | range | None = None,
 ) -> int:
     """
-    对 target_data 中「所有」单位做同一检查：单位内所有单位 ID 引用（copy_id, base_id, dead_unit_id, blood_unit_id,
-    building/projectile/dead_fish/creatable 内相关字段）若在 id_mapping 的 key 中则改为 value。
+    对 target_data 中单位内单位 ID 引用（copy_id, base_id, dead_unit_id, blood_unit_id,
+    building/projectile/type_50/dead_fish/creatable 内相关字段）若在 id_mapping 的 key 中则改为 value。
+    若指定 only_inside_unit_indices，则仅对这些槽位上的单位做重映射，不修改范围外单位的抛射物/死亡单位等附属属性。
     返回重映射总次数。
     """
+    indices_set = set(only_inside_unit_indices) if only_inside_unit_indices is not None else None
     total = 0
     for civ in target_data.civs:
-        for u in civ.units or []:
-            if u is not None:
-                total += _remap_unit_id_refs_in_unit(u, id_mapping)
+        units = civ.units or []
+        for unit_idx, u in enumerate(units):
+            if u is None:
+                continue
+            if indices_set is not None and unit_idx not in indices_set:
+                continue
+            total += _remap_unit_id_refs_in_unit(u, id_mapping)
     if total:
-        print(f"[单位 ID 引用全局重映射] 共 {total} 处（含 46/557 等对 26xx 的引用）")
+        scope = "指定槽位内" if indices_set is not None else "全局"
+        print(f"[单位 ID 引用重映射] {scope} 共 {total} 处（copy_id/dead_unit_id/projectile/...）")
     return total
 
 
@@ -312,12 +337,15 @@ def finalize_unit_id_migration(
     implanted_indices: set[int] | range,
 ) -> tuple[int, int]:
     """
-    植入完成后统一收尾：先对齐植入单位的自身 ID（Unit.id = 槽位），再全局重映射 copy_id/base_id 等。
+    植入完成后统一收尾：先对齐植入单位的自身 ID（Unit.id = 槽位），再仅对「指定槽位内」的单位重映射
+    copy_id/base_id/dead_unit_id/projectile 等引用，不修改范围外单位的这些属性。
     调用方在完成所有 implant_units_from_dat 后调用一次即可。
     返回 (修正的 .id 数, 重映射的引用数)。
     """
     n_id = fix_implanted_unit_self_ids(target_data, implanted_indices)
-    n_refs = remap_unit_copy_base_ids_global(target_data, id_mapping)
+    n_refs = remap_unit_copy_base_ids_global(
+        target_data, id_mapping, only_inside_unit_indices=implanted_indices
+    )
     return n_id, n_refs
 
 
@@ -373,6 +401,7 @@ def _iter_unit_id_refs_for_check(unit) -> list[tuple[str, int]]:
                     out.append((f"building.annexes[{i}].unit_id", v))
     for sub, attr, key in [
         (getattr(unit, "projectile", None), "projectile_unit_id", "projectile.projectile_unit_id"),
+        (getattr(unit, "type_50", None), "projectile_unit_id", "type_50.projectile_unit_id"),
         (getattr(unit, "dead_fish", None), "tracking_unit", "dead_fish.tracking_unit"),
     ]:
         if sub is not None and hasattr(sub, attr):
@@ -386,6 +415,11 @@ def _iter_unit_id_refs_for_check(unit) -> list[tuple[str, int]]:
                 v = getattr(tl, "unit_id", None)
                 if isinstance(v, int):
                     out.append((f"creatable.train_locations[{i}].unit_id", v))
+        for attr in ("charge_projectile_unit", "secondary_projectile_unit"):
+            if hasattr(creatable, attr):
+                v = getattr(creatable, attr, None)
+                if isinstance(v, int):
+                    out.append((f"creatable.{attr}", v))
     return out
 
 

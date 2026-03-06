@@ -6,21 +6,37 @@
 
 满足两点：
 1. 只替换单位类型 ID，绝不修改单位实例 ID（见下方常量说明）。
-2. 触发器内所有出现单位类型 ID 的位置都会检查并替换（包括效果中的两个槽位，
-   如「生成驻扎物体」里的驻扎单位 + 被驻扎单位 对应 object_list_unit_id 与 object_list_unit_id_2）。
+2. 触发器内所有出现单位类型 ID 的位置都会检查并替换（包括效果中的两个槽位、
+   「修改属性」效果中表示单位 ID 的属性如 Projectile Unit / Dead Unit / Trailing Unit 等）。
 """
 
 from AoE2ScenarioParser.scenarios.aoe2_de_scenario import AoE2DEScenario
 from AoE2ScenarioParser.helper.helper import value_is_valid
+from AoE2ScenarioParser.datasets.effects import EffectId
+from AoE2ScenarioParser.datasets.trigger_lists import ObjectAttribute
 
 # 按显示顺序选触发器时可使用：
 # from AoE2ScenarioParser.objects.support.trigger_select import TS  # trigger_select=TS.display(0)
 
 # ---------- 单位类型 ID（会替换）：数据库中的单位编号，如 圣骑士=74 ----------
-# 效果中所有这类属性都会遍历，确保「驻扎单位 / 被驻扎单位」等双槽位都被覆盖
+# 效果中直接存单位类型 ID 的属性名
 EFFECT_UNIT_TYPE_ATTRS = ("object_list_unit_id", "object_list_unit_id_2")
 # 条件中表示「按单位类型筛选」时的属性（若该条件类型使用 object_list 存单位类型）
 CONDITION_UNIT_TYPE_ATTRS = ("object_list",)
+
+# 「修改属性」类效果：effect_type 属于以下之一且 object_attributes 属于下列属性时，quantity 表示单位 ID，需参与迁移
+MODIFY_ATTR_EFFECT_IDS = (EffectId.MODIFY_ATTRIBUTE, EffectId.MODIFY_OBJECT_ATTRIBUTE, EffectId.MODIFY_ATTRIBUTE_FOR_CLASS)
+# 修改属性效果中，quantity 表示单位类型 ID 的属性（Projectile Unit、次要抛射物、死亡单位、血迹单位、尾迹单位、训练建筑、特质单位、冲锋抛射物等）
+OBJECT_ATTRIBUTE_UNIT_IDS = (
+    ObjectAttribute.PROJECTILE_UNIT,           # 16  抛射物单位
+    ObjectAttribute.TRAIN_LOCATION,           # 42  训练该单位的建筑/单位
+    ObjectAttribute.TRAIT_PIECE,              # 56  特质关联单位
+    ObjectAttribute.DEAD_UNIT_ID,             # 57  死亡后生成单位
+    ObjectAttribute.SECONDARY_PROJECTILE_UNIT, # 65  次要抛射物单位（如诸葛弩）
+    ObjectAttribute.BLOOD_UNIT,              # 66  血迹单位
+    ObjectAttribute.CHARGE_PROJECTILE_UNIT,  # 125 冲锋抛射物单位
+    ObjectAttribute.TRAILING_UNIT,           # 145 尾迹单位
+)
 
 # ---------- 单位实例 ID（绝不修改）：地图上具体是哪一个单位 ----------
 # 以下属性存的是实例 ID，本脚本不会读取或写入它们
@@ -37,6 +53,13 @@ def _count_unit_type_in_effects(effects, unit_id: int) -> int:
                 continue
             val = getattr(effect, attr, None)
             if value_is_valid(val) and val == unit_id:
+                count += 1
+        # 「修改属性」类效果：object_attributes 为上述单位 ID 属性时，quantity 即单位类型 ID
+        eff_type = getattr(effect, "effect_type", None)
+        obj_attr = getattr(effect, "object_attributes", None)
+        if value_is_valid(eff_type) and eff_type in MODIFY_ATTR_EFFECT_IDS and obj_attr in OBJECT_ATTRIBUTE_UNIT_IDS:
+            q = getattr(effect, "quantity", None)
+            if value_is_valid(q) and q == unit_id:
                 count += 1
     return count
 
@@ -55,7 +78,7 @@ def _count_unit_type_in_conditions(conditions, unit_id: int) -> int:
 
 
 def _replace_unit_type_in_effects(effects, old_unit_id: int, new_unit_id: int) -> int:
-    """只替换效果中的单位类型 ID（EFFECT_UNIT_TYPE_ATTRS），不碰实例 ID。返回替换次数。"""
+    """只替换效果中的单位类型 ID（EFFECT_UNIT_TYPE_ATTRS + 修改属性中的单位 ID 属性），不碰实例 ID。返回替换次数。"""
     count = 0
     for effect in effects:
         for attr in EFFECT_UNIT_TYPE_ATTRS:
@@ -64,6 +87,14 @@ def _replace_unit_type_in_effects(effects, old_unit_id: int, new_unit_id: int) -
             val = getattr(effect, attr, None)
             if value_is_valid(val) and val == old_unit_id:
                 setattr(effect, attr, new_unit_id)
+                count += 1
+        # 「修改属性」类效果：单位 ID 属性对应的 quantity 一并替换
+        eff_type = getattr(effect, "effect_type", None)
+        obj_attr = getattr(effect, "object_attributes", None)
+        if value_is_valid(eff_type) and eff_type in MODIFY_ATTR_EFFECT_IDS and obj_attr in OBJECT_ATTRIBUTE_UNIT_IDS:
+            q = getattr(effect, "quantity", None)
+            if value_is_valid(q) and q == old_unit_id:
+                effect.quantity = new_unit_id
                 count += 1
     return count
 

@@ -231,7 +231,7 @@ def main(argv=None):
     g_tech.add_argument("--tech-ref-index", type=int, default=None, help="复制坐标的参考下标（默认用 start）")
 
     g_unit = ap.add_argument_group("Unit")
-    g_unit.add_argument("--unit", metavar="START-END", default="800-853", help="单位图标范围；例: 800-999")
+    g_unit.add_argument("--unit", metavar="START-END", default="800-854", help="单位图标范围；例: 800-999")
     g_unit.add_argument("--unit-atlas", default="ingameunits")
     g_unit.add_argument("--unit-filename", default="textures/ingame/units/{idx}_50730.dds", help="{idx} 为下标")
     g_unit.add_argument("--unit-suffix", default="50730")

@@ -22,6 +22,7 @@ TODO（本次暂不实现，后续如需再补）：
 上述若在模组中有新增或修改，也需纳入迁移/植入流程。
 """
 import sys
+import os
 from pathlib import Path as _Path
 
 _clone_genie = _Path(__file__).resolve().parent / "genieutils-py" / "src"
@@ -39,6 +40,9 @@ from tools.dat_implant_graphics import implant_graphics_from_dat
 from tools.dat_implant_sounds import implant_sounds_from_dat
 from tools.dat_remap_graphic_sound_in_units import apply_remap_to_dat
 from AoE2ScenarioParser.scenarios.aoe2_de_scenario import AoE2DEScenario
+from AoE2ScenarioParser.exceptions.asp_exceptions import UnsupportedAttributeError
+from AoE2ScenarioParser.sections.retrievers.retriever_object_link import RetrieverObjectLink
+from AoE2ScenarioParser.scenarios.scenario_store.getters import get_scenario_version
 from tools.batch_replace_trigger_unit_id import apply_unit_id_in_scenario
 from tools.batch_replace_map_unit_id import apply_map_unit_id_in_scenario
 from tools.batch_replace_trigger_tech_id import apply_tech_mapping_in_scenario
@@ -388,14 +392,54 @@ if __name__ == "__main__":
         buildings_max=ICONS_EXTEND_BUILDINGS_MAX,
         units_suffix=ICONS_EXTEND_UNITS_SUFFIX,
     )
-
-    # 可选：更新场景中的单位 ID 与科技 ID（场景在 Source/senarios/，输出到 Output/senarios/，只解析一次、处理完再输出）
-    _scenario_name = "TogawaSakiko1_Haruhikage.aoe2scenario"
     unit_map = build_unit_id_mapping(OLD_MOD_DAT)
     tech_map = build_tech_id_mapping()
-    apply_scenario_mappings(
-        SOURCE_DIR / SCENARIOS_SUBDIR / _scenario_name,
-        OUTPUT_DIR / SCENARIOS_SUBDIR / _scenario_name,
-        unit_map,
-        tech_map,
-    )
+    # 可选：更新场景中的单位 ID 与科技 ID（场景在 Source/senarios/，输出到 Output/senarios/，只解析一次、处理完再输出）
+    scenarios_dir = SOURCE_DIR / SCENARIOS_SUBDIR
+    if not scenarios_dir.exists():
+        print("未找到 Source/senarios/，跳过场景替换")
+    else:
+        # 绕过 1.54 下 execute_on_load：1.54 的 section 无此 retriever，拉取时直接返回 0；且不禁用该属性以便 Trigger 可赋默认值
+        _orig_overwrite = RetrieverObjectLink.overwrite_unsupported_properties
+        _orig_pull = RetrieverObjectLink.pull_from_link
+        _orig_push = RetrieverObjectLink.push_to_link
+
+        def _overwrite_allow_execute_on_load_154(self, class_reference, uuid):
+            if self.name == "execute_on_load" and get_scenario_version(uuid) == "1.54":
+                return False
+            return _orig_overwrite(self, class_reference, uuid)
+
+        def _pull_execute_on_load_154_default(self, uuid=None, number_hist=None, host_obj=None, progress=None):
+            if self.name == "execute_on_load" and get_scenario_version(uuid) == "1.54":
+                return 0  # 1.54 的 section 无此字段，不访问 section，直接返回默认
+            return _orig_pull(self, uuid=uuid, number_hist=number_hist, host_obj=host_obj, progress=progress)
+
+        def _push_skip_unsupported_154(self, uuid=None, number_hist=None, host_obj=None, progress=None):
+            try:
+                return _orig_push(self, uuid=uuid, number_hist=number_hist, host_obj=host_obj, progress=progress)
+            except UnsupportedAttributeError:
+                # 1.54 下被禁用的属性（如 caption_string）在写入时 getattr 会 raise，直接跳过该属性
+                return
+
+        RetrieverObjectLink.overwrite_unsupported_properties = _overwrite_allow_execute_on_load_154
+        RetrieverObjectLink.pull_from_link = _pull_execute_on_load_154_default
+        RetrieverObjectLink.push_to_link = _push_skip_unsupported_154
+        try:
+            for _scenario_name in os.listdir(scenarios_dir):
+                src_path = scenarios_dir / _scenario_name
+                if not src_path.is_file():
+                    continue
+                _lower = _scenario_name.lower()
+                if not (_lower.endswith(".scx") or _lower.endswith(".aoe2scenario")):
+                    continue
+                apply_scenario_mappings(
+                    src_path,
+                    OUTPUT_DIR / SCENARIOS_SUBDIR / _scenario_name,
+                    unit_map,
+                    tech_map,
+                )
+            print("场景替换完成")
+        finally:
+            RetrieverObjectLink.overwrite_unsupported_properties = _orig_overwrite
+            RetrieverObjectLink.pull_from_link = _orig_pull
+            RetrieverObjectLink.push_to_link = _orig_push
